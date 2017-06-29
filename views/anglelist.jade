@@ -1,0 +1,15 @@
+extends layout
+
+block content 
+    table#list_all
+        thead
+            tr: th Angles
+        tbody
+            each angle, i in anglelist
+                tr
+                    td id = #{angle._id}
+                    td accel_angle_x = #{angle.x_angle}
+                    td accel_angle_y = #{angle.y_angle}
+                    td accel_angle_z = #{angle.z_angle}
+                    td left #{angle.leftWeight}
+                    td right #{angle.rightWeight}
